@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script> 
+     
+        <meta charset="UTF-8"/>
+        <title>Backbone.js Library</title>
+        <link rel="stylesheet" href="css/screen.css">
+        <link rel="stylesheet" href="css/cupertino/jquery-ui.css">
+        
+    </head>
+    <body>
+        
+        <div id="books">
+                <form id="addBook" action="#">
+                    <div >
+                        <b><label for="coverImage">Image: </label><input id="coverImage" type="file"  />&nbsp;</b>
+                        <img id="image" src="#" style="display: none;"/>
+                        <br><b><label for="title">Title: </label><input id="title" type="text" /></b>&nbsp;
+                        <b><label for="author">Author: </label><input id="author" type="text" /></b>&nbsp;
+                        <b><label for="releaseDate">Release date: </label><input id="releaseDate" type="text" /></b>&nbsp;
+                        <b><label for="price">Price: </label><input id="price" type="text" /></b>&nbsp;
+                        <b><label for="description">Description: </label> &nbsp;<input id="description" type="text"/></b>&nbsp;
+                        <button class="btn btn-primary" id="add">Add</button>
+                        <br><br>
+                    </div>
+                </form>
+        </div>
+
+       
+        <script id="bookTemplate" type="text/template">
+          <span class="coverImage"></span>
+              <img src="<%= coverImage %>"/>
+                 
+            <ul>
+                <b><li><span class = "title"><%= title %></li></b>  
+                <li><span class="author"><%= author %></li>
+                <li><span class= "date"><%= $.format.date( new Date( releaseDate ), 'MMMM yyyy' ) %></li> 
+                <li><b>$</b><span class= "price"><%= price %> </li>
+                <li><span class= "description"><%= description %></li>
+            </ul>
+        
+            <button class = "btn btn-danger delete">Delete</button>
+            <button class="btn btn-warning edit">Edit</button>
+            <button class = "btn btn-success update" style="display:none">Update</button>
+            <button class = "btn btn-danger cancel"style="display:none">Cancel</button>
+            
+    
+        </script>
+       
+        <script src="js/lib/jquery.min.js"></script>
+        <script src="js/lib/underscore-min.js"></script>
+        <script src="js/lib/jquery-dateformat.js"></script>
+        <script src="js/lib/jquery.form.js"></script>
+        <script src="js/lib/jquery-ui.min.js"></script>
+        <script src="js/lib/backbone-min.js"></script> 
+        <script src="js/models/book.js"></script>
+        <script src="js/collections/library.js"></script>
+        <script src="js/views/book.js"></script>
+        <script src="js/views/library.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

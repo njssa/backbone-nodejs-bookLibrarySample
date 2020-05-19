@@ -1,0 +1,39 @@
+body {
+    background-color: linen;
+}
+#add{
+    background-color:teal;
+}
+.bookContainer {
+  
+    width: 450px;
+    height:320px;
+    background-color: whitesmoke;
+    float: left;
+    margin: 5px;
+    
+}
+
+.bookContainer img {
+    float: left;
+    margin: 10px;
+   
+}
+
+.bookContainer ul {
+    list-style-type: none;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-bottom: 0;
+    
+}
+
+.bookContainer button {
+   
+    float: right;
+    margin-bottom: 0px;
+    margin: 10px;
+    
+}
+
+
