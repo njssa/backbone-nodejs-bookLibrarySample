@@ -2,7 +2,8 @@
 
 A sample of a library application for managing books using Backbone.js, Node.js and MongoDB. 
 
-** Installation **
+
+**Installation**
 
 ```
 git clone https://github.com/njssa/backbone-nodejs-bookLibrarySample.git
